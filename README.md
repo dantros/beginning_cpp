@@ -1,6 +1,6 @@
 # beginning_cpp
 
-This is a simple set of examples mean to aid beginners with C++ on Windows with CMake and Premake.
+This is a simple set of examples meant to aid beginners with C++ on Windows with CMake and Premake.
 
 ## Getting started
 
@@ -19,7 +19,7 @@ This is a simple set of examples mean to aid beginners with C++ on Windows with 
 - Compile it in the same way with Visual Studio. A bin folder will be created with a Release or Debug folder depending on the Solution Configuration. Inside them, you will find your binaries.
 - Just Rock with C++ and Premake!
 
-## In progress
+## "In progress"
 
 - premake files for examples with many files.
 - C++ examples using templates.
