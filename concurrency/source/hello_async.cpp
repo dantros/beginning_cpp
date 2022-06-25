@@ -81,7 +81,7 @@ void main()
     // here we have all the info that we need.
 
     // Note: we can add execution preferences as policies, to prefer async calls to be executed in a different thread,
-    // in the same thread when calling get, or just let runtime decides.
+    // in the same thread when calling get, or just let runtime decides. Check the documentation!.
 
     auto endTime = std::chrono::steady_clock::now();
     std::chrono::duration<double> duration = endTime - startTime;
