@@ -68,14 +68,20 @@ void main()
 
     constexpr std::uint64_t LimitsScale = 3;
 
-    // spawn and start threads
+    // we can launch another thread (if possible) with async, and continue working in the current thread.
     // each thread has its own local storage. To pass by reference, we need std::ref.
     auto asyncThread = std::async(searchForPrimeNumbers, LimitsScale * limits[0], LimitsScale * limits[1], std::ref(primeNumbers1), '1');
 
+    // we do some work in this thread.
     searchForPrimeNumbers(LimitsScale * limits[1], LimitsScale * limits[2], std::ref(primeNumbers2), '2');
 
-    // wating for both threads to finish
+    // at this point, the async thread should be done, if it is not ready yet, it will be completed.
     asyncThread.get();
+
+    // here we have all the info that we need.
+
+    // Note: we can add execution preferences as policies, to prefer async calls to be executed in a different thread,
+    // in the same thread when calling get, or just let runtime decides.
 
     auto endTime = std::chrono::steady_clock::now();
     std::chrono::duration<double> duration = endTime - startTime;
