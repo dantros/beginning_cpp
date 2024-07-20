@@ -10,15 +10,12 @@ if(MSVC)
     set(BUILD_SHARED_LIBS TRUE)
 endif()
 
+# we don't need to specify headers, only source files
+# headers are referenced from inside each cpp file
 add_library(arrow_lib SHARED
-    "arrow_functions.h"
     "arrow_functions.cpp"
-    "arrow.h"
     "arrow.cpp"
-    "point_functions.h"
     "point_functions.cpp"
-    "point.h"
-    "triangle.h"
     "triangle.cpp"
 )
 
