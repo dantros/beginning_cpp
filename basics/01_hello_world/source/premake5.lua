@@ -4,11 +4,12 @@ workspace "hello_world_ws"
    configurations { "Debug", "Release" }
    location "../build_premake5"
 
-project "hello_world_project"
+project "hello_world"
+   location "%{wks.location}/hello_world"
    kind "ConsoleApp"
    language "C++"
    cppdialect "C++20"
-   targetdir "../build_premake5/bin/%{cfg.buildcfg}"
+   targetdir "%{wks.location}/%{cfg.buildcfg}"
 
    files { "hello_world.cpp" }
 
