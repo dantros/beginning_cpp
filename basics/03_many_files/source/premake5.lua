@@ -5,28 +5,25 @@ workspace "many_files_ws"
     location "../build_premake5"
 
 project "many_files_project"
-    location "../build_premake5/many_files_project"
+    location "%{wks.location}/many_files_project"
     -- check out the values for 'kind' at https://premake.github.io/docs/kind
     kind "ConsoleApp"
     language "C++"
     cppdialect "C++20"
-    targetdir "../build_premake5/bin/%{cfg.buildcfg}"
+    targetdir "%{wks.location}/%{cfg.buildcfg}"
 
-    -- you can use wildcards to catch all the files...
-    -- files { "**.h", "**.c" }
+    -- you can use wildcards to catch all the source files...
+    -- files { "**.cpp" }
     -- but this time we will write them one by one...
     files {
         "main.cpp",
-        "arrow_functions.h",
         "arrow_functions.cpp",
-        "arrow.h",
         "arrow.cpp",
-        "point_functions.h",
         "point_functions.cpp",
-        "point.h",
-        "triangle.h",
         "triangle.cpp"
     }
+    -- We do not need to specify headers, each cpp file
+    -- should now how to find them when including them.
 
     filter "configurations:Debug"
         defines { "DEBUG" }

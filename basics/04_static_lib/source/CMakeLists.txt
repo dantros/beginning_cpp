@@ -1,27 +1,19 @@
 cmake_minimum_required(VERSION 3.20)
 set(CMAKE_LEGACY_CYGWIN_WIN32 OFF)
 
-project(code_as_static_library C CXX)
+project(code_as_static_library CXX)
 
-add_library(arrow_lib STATIC
-    "arrow_functions.h"
-    "arrow_functions.cpp"
-    "arrow.h"
-    "arrow.cpp"
-    "point_functions.h"
-    "point_functions.cpp"
-    "point.h"
-    "triangle.h"
-    "triangle.cpp"
-)
+# Here we are including the "CMakeLists.txt" file in the subdirectory "arrow_lib"
+# It is a way to distribute/encapsulate the build process.
+# But we could also have described the arrow_lib library here in the same file.
+add_subdirectory(arrow_lib)
 
-add_executable(main "main.cpp")
-set_property(TARGET main PROPERTY CXX_STANDARD 20)
+# We also need to know where are the headers
+set(ARROW_LIB_INCLUDES arrow_lib/includes)
 
-# Here we bind the library
+add_executable(static_lib_demo "main.cpp")
+set_property(TARGET static_lib_demo PROPERTY CXX_STANDARD 20)
 
-## Headers are in this directory
-target_include_directories(main PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
-
-## We need the path to the librady binary
-target_link_libraries(main PRIVATE arrow_lib)
+# Here we bind the library and its headers
+target_link_libraries(static_lib_demo PRIVATE arrow_library)
+target_include_directories(static_lib_demo PRIVATE ${ARROW_LIB_INCLUDES})
