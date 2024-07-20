@@ -6,10 +6,11 @@ workspace "hello_classes_ws"
    
 
 project "hello_classes_project"
+   location "%{wks.location}/hello_classes_project"
    kind "ConsoleApp"
    language "C++"
    cppdialect "C++20"
-   targetdir "bin/%{cfg.buildcfg}"
+   targetdir "%{wks.location}/%{cfg.buildcfg}"
 
    files { "hello_classes.cpp" }
 

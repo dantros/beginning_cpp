@@ -4,8 +4,8 @@ workspace "many_files_ws"
     configurations { "Debug", "Release" }
     location "../build_premake5"
 
-project "many_files_project"
-    location "%{wks.location}/many_files_project"
+project "many_files"
+    location "%{wks.location}/many_files"
     -- check out the values for 'kind' at https://premake.github.io/docs/kind
     kind "ConsoleApp"
     language "C++"

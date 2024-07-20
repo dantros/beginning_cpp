@@ -11,20 +11,15 @@ project "arrow_library"
     targetdir "%{wks.location}/%{cfg.buildcfg}"
 
     -- Considering only the files related to this library
-    -- for convenience, we are using wildcards
+    -- for ilustration purposes, we are using wildcards
     files { "sources/*.cpp" }
 
     -- ... but we could also have listed each file independently
     --[[
     files {
-        "includes/arrow_functions.h",
         "sources/arrow_functions.cpp",
-        "includes/arrow.h",
         "sources/arrow.cpp",
-        "includes/point_functions.h",
         "sources/point_functions.cpp",
-        "includes/point.h",
-        "includes/triangle.h",
         "sources/triangle.cpp"
     }
     ]]--

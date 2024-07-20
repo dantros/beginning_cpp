@@ -3,6 +3,8 @@ set(CMAKE_LEGACY_CYGWIN_WIN32 OFF)
 
 project(many_files_project CXX)
 
+# we don't need to specify headers, only source files
+# headers are referenced from inside each cpp file
 add_executable(many_files
     "main.cpp"
     "arrow_functions.cpp"
