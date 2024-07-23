@@ -21,16 +21,16 @@ The following software is used in these tutorials.
 
 Open the 'Developer Command Prompt for VS 2022' selecting it from the Windows app launcher in the 'Visual Studio 2022' folder. You can also press 'Windows key' and then start typing 'Developer Command Prompt for VS 2022'. you will get a terminal with the following text:
 
-'''
+```
 **********************************************************************
 ** Visual Studio 2022 Developer Command Prompt v17.9.2
 ** Copyright (c) 2022 Microsoft Corporation
 **********************************************************************
-'''
+```
 
 The compiler is 'cl', you can get how to use it just typing it.
 
-'''
+```
 C:\tutorials>cl
 Microsoft (R) C/C++ Optimizing Compiler Version 19.38.33135 for x64
 Copyright (C) Microsoft Corporation.  All rights reserved.
@@ -38,15 +38,15 @@ Copyright (C) Microsoft Corporation.  All rights reserved.
 usage: cl [ option... ] filename... [ /link linkoption... ]
 
 C:\tutorials>
-'''
+```
 
 Do not, that in a normal 'cmd' you won't have access to 'cl' nor other building software. The 'cmd' needs to be configured with some environment variables to gain access.
 
 I know you are exscited at this point, so go ahead and compile a hello_world program all by yourself. Get the code at 'basics/01_hello_world/source/hello_world.cpp', put this file in a folder of your preference (I'm using C>\tutorials) and then run:
 
-'''
+```
 C>\tutorials>cl hello_world.cpp
-'''
+```
 
 You will get your executable 'hello_world.exe' in the same folder. Try it.
 
@@ -62,7 +62,7 @@ TODO.
 
 For this tutorial, I'm using this 'prog.bat' file, I located it at 'C:\tutorials\prog\'. Then, I added the directory 'C:\tutorials\prog\' to the system path.
 
-'''
+```
 echo off
 
 :: conda directory
@@ -85,6 +85,6 @@ echo on
 
 :: Visual Studio Developer
 "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvars64.bat"
-'''
+```
 
 You should have the right paths depending on the installations you did on your machine.
