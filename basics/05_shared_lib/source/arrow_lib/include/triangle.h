@@ -1,7 +1,8 @@
 #pragma once
+#include "arrow_lib_shared.h"
 #include "point.h"
 
-class Triangle
+class ARROW_LIB_API Triangle
 {
 private:
     Point mA, mB, mC;
