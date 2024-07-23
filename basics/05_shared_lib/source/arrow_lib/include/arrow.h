@@ -1,4 +1,5 @@
 #pragma once
+#include "arrow_lib_shared.h"
 #include "point.h"
 
 /* Functions defined in the body of a class defintion are inlined...,
@@ -8,7 +9,7 @@
  * that will populate all files as they are in the headers.*/
 #include "point_functions.h"
 
-class Arrow
+class ARROW_LIB_API Arrow
 {
 public:
     Arrow() :
