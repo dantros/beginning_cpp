@@ -8,7 +8,7 @@ add_library(arrow_library SHARED
 )
 
 # with this macro, we add the __declspec(dllexport) / __declspec(dllexport) to the classes and
-# functions of the public API of this shared library
+# functions of the public API of this shared library. Check 'arrow_lib_shared.h'
 if(MSVC)
     target_compile_definitions(arrow_library PRIVATE ARROW_LIB=1)
 endif()
