@@ -7,7 +7,7 @@ project "arrow_library"
     cppdialect "C++20"
 
     -- with this macro, we add the __declspec(dllexport) / __declspec(dllexport) to the classes and
-    -- functions of the public API of this shared library
+    -- functions of the public API of this shared library. Check 'arrow_lib_shared.h'
     defines { "ARROW_LIB" }
 
     -- We are locating the lib in the same directory than the executable.
