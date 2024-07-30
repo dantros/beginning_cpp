@@ -1,0 +1,14 @@
+EnsureSConsVersion(3, 1, 2)
+EnsurePythonVersion(3, 6)
+
+env = Environment()
+
+# These are flags for the compiler, these are for Windows with Visual Studio Compiler,
+# they may differ for other compilers and for linux.
+env.Append(CCFLAGS=[
+    "/std:c++20", # Specifying the C++ standard. 
+    "/EHsc" # This is requiered if the code uses exceptions. Check: https://learn.microsoft.com/en-us/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4530?view=msvc-170
+])
+
+exec = env.Program(target='hello_classes_project', source=['hello_classes.cpp'])
+Default(exec)

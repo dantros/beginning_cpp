@@ -1,0 +1,19 @@
+
+Import('env')
+
+env_lib = env.Clone(
+    CPPPATH=['include'] # Setting the headers for the library code
+)
+
+source_files = [
+    'source/arrow_functions.cpp',
+    'source/arrow.cpp',
+    'source/point_functions.cpp',
+    'source/triangle.cpp'
+]
+
+# with this define, we add the __declspec(dllexport) / __declspec(dllexport) to the classes and
+# functions of the public API of this shared library. Check 'arrow_lib_shared.h'
+env_lib.Append(CPPDEFINES = ['ARROW_LIB']) 
+
+env_lib.SharedLibrary('arrow_library', source_files)

@@ -36,3 +36,6 @@ build*/
 
 # ides
 .vscode
+
+# SCons cache file
+.sconsign.dblite

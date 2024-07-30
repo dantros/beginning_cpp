@@ -1,0 +1,5 @@
+
+# Scons cannot access the parent folder, so you need this file to trigger build outside the source tree.
+# It maps 'source/' to 'build_scons/', so you will find your executable and build files at build_scons.
+# It would copy the source code to 'variant_dir' as well, unless we specify duplicate as False
+SConscript('source/SConscript', variant_dir='build_scons', duplicate=False)
