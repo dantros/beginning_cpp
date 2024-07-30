@@ -11,7 +11,7 @@ The recomendation is to try options 1 to 3 in order.
 
 1. Copy-paste the source code to an online C++ compiler, such as: https://cpp.sh/
 
-2. Using Microsoft Visual Studio CLI (Command Line Interface). Just open the 'Developer Command Prompt for VS 2022' and execute:
+2. Using Microsoft Visual Studio CLI (Command Line Interface). Just open 'Developer Command Prompt for VS 2022' and execute:
 
 ```
 YOUR_WORKING_DIRECTORY> cl.exe your_program.cpp
