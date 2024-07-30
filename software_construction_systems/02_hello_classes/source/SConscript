@@ -1,7 +1,5 @@
-EnsureSConsVersion(3, 1, 2)
-EnsurePythonVersion(3, 6)
 
-env = Environment()
+Import('env')
 
 # These are flags for the compiler, these are for Windows with Visual Studio Compiler,
 # they may differ for other compilers and for linux.
