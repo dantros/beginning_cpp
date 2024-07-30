@@ -2,6 +2,7 @@
 
 This repository aims to aid beginners with C++. Covering different topics. It is a constant work in progress. So far there are examples for:
 
+- [C++ Basics](./basics/README.md)
 - [Software Construction Systems Tutorials](./software_construction_systems/README.md)
 
 ## Getting the necessary software
