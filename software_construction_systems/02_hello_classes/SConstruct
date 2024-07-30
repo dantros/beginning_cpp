@@ -5,7 +5,7 @@ EnsurePythonVersion(3, 6)
 # More info on: https://github.com/SCons/scons/wiki/SconstructMultiple
 build_config = ARGUMENTS.get("config", "release")
 
-# YUes, you could define more build configurations.
+# Yes, you could define more build configurations.
 if build_config not in ("release", "debug"):
     print("Error: expected 'debug' or 'release', found: " + build_config)
     Exit(1)

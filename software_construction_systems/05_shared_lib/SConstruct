@@ -1,1 +1,47 @@
-SConscript('source/SConscript', variant_dir='build_scons', duplicate=False)
+EnsureSConsVersion(3, 1, 2)
+EnsurePythonVersion(3, 6)
+
+# Specifying the build configuration
+# More info on: https://github.com/SCons/scons/wiki/SconstructMultiple
+build_config = ARGUMENTS.get("config", "release")
+
+# Yes, you could define more build configurations.
+if build_config not in ("release", "debug"):
+    print("Error: expected 'debug' or 'release', found: " + build_config)
+    Exit(1)
+else:
+    print("Building %s configuration" % build_config)
+
+# For MSVC, all opptions are listed at: https://learn.microsoft.com/en-us/cpp/build/reference/compiler-options-listed-by-category?view=msvc-170
+release_flags = [
+    "-O2", # generates fast code
+    "-DNDEBUG", # defines NDEBUG for your code
+    "/MD" # multithreaded DLL
+]
+
+debug_flags = [
+    "/Od", # Disable optimizations
+    #"/Zi", # complete debugging information, creates vc140.pdb file next to the SConstruct file
+    "-D_DEBUG", # defines _DEBUG for your code
+    "/MDd" # multithreaded DLL, required as it is used internally
+]
+
+config_flags = []
+if build_config == "release": config_flags += release_flags
+elif build_config == "debug": config_flags += debug_flags
+
+# Creating the base environment for our build
+env = Environment()
+
+# Adding all the flags depending on our build configuration
+env.Append(CCFLAGS=[
+    config_flags
+])
+
+# To store different build configurations in different folders
+variant_dir = 'build_scons/' + build_config
+
+# Scons cannot access the parent folder, so you need this file to trigger build outside the source tree.
+# It maps 'source/' to 'build_scons/', so you will find your executable and build files at build_scons.
+# It would copy the source code to 'variant_dir' as well, unless we specify duplicate as False
+SConscript('source/SConscript', 'env', variant_dir=variant_dir, duplicate=False)

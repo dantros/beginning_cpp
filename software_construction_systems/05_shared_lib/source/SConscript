@@ -1,8 +1,6 @@
-EnsureSConsVersion(3, 1, 2)
-EnsurePythonVersion(3, 6)
 
-# Base setting for our environment
-env = Environment()
+Import('env')
+
 env.Append(CCFLAGS=["/std:c++20", "/EHsc"])
 
 # Executing SConscript files nested in the source tree, it could be more than one.
@@ -25,5 +23,5 @@ env_exe.Append(
     LIBS=['arrow_library']
 )
 
-exec = env_exe.Program(target='static_lib_demo_ws', source=['main.cpp'])
+exec = env_exe.Program(target='shared_lib_demo_ws', source=['main.cpp'])
 Default(exec)

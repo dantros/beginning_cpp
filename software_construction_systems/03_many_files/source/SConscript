@@ -1,7 +1,6 @@
-EnsureSConsVersion(3, 1, 2)
-EnsurePythonVersion(3, 6)
 
-env = Environment()
+Import('env')
+
 env.Append(CCFLAGS=["/std:c++20", "/EHsc"])
 
 source_files = [
