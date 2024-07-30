@@ -1,0 +1,29 @@
+EnsureSConsVersion(3, 1, 2)
+EnsurePythonVersion(3, 6)
+
+# Base setting for our environment
+env = Environment()
+env.Append(CCFLAGS=["/std:c++20", "/EHsc"])
+
+# Executing SConscript files nested in the source tree, it could be more than one.
+SConscript([
+    'arrow_lib/SConscript'
+], 'env')
+
+# Custom environment to build the executable
+env_exe = env.Clone()
+
+# Telling our environment ...
+env_exe.Append(
+    # where are the includes for the arrow_library
+    CPPPATH=['arrow_lib/include'],
+
+    # where to find libraries
+    LIBPATH=['arrow_lib'],
+
+    # the name of the required libraries
+    LIBS=['arrow_library']
+)
+
+exec = env_exe.Program(target='static_lib_demo_ws', source=['main.cpp'])
+Default(exec)

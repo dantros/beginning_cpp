@@ -1,0 +1,18 @@
+
+Import('env')
+
+env_lib = env.Clone(
+    CPPPATH=['includes'] # Setting the headers for the library code
+)
+
+source_files = [
+    'sources/arrow_functions.cpp',
+    'sources/arrow.cpp',
+    'sources/point_functions.cpp',
+    'sources/triangle.cpp'
+]
+
+lib = env_lib.StaticLibrary('arrow_library', source_files)
+
+# Saving the library in the environment, so the executable knows where to find it.
+env.Append(LIBS=['arrow_library'])
