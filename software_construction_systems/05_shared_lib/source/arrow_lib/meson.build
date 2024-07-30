@@ -7,7 +7,7 @@ arrow_lib_sources = [
 ]
 arrow_lib_include = include_directories('include')
 
-# with the macro define ARROW_LIB, we add the __declspec(dllexport) / __declspec(dllexport) to the classes and
+# with the define ARROW_LIB, we add the __declspec(dllexport) / __declspec(dllexport) to the classes and
 # functions of the public API of this shared library. Check 'arrow_lib_shared.h'
 # Unlike CMake and premake, meson does not have a specific command, and only uses -DFOO notation given to the compiler
 # Check https://github.com/mesonbuild/meson/issues/6269
