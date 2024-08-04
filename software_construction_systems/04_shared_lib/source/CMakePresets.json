@@ -14,7 +14,8 @@
             "binaryDir": "${sourceDir}/../build_cmake/${presetName}",
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "Release",
-                "CMAKE_EXPORT_COMPILE_COMMANDS": "Yes"
+                "CMAKE_EXPORT_COMPILE_COMMANDS": "Yes",
+                "CMAKE_INSTALL_PREFIX": "${sourceDir}/../install_cmake/${presetName}"
             }
         },
         {

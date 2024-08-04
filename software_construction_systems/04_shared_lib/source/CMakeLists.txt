@@ -42,3 +42,13 @@ set_property(TARGET shared_lib_demo PROPERTY CXX_STANDARD 20)
 # Here we bind the library and its headers
 target_link_libraries(shared_lib_demo PRIVATE arrow_library)
 target_include_directories(shared_lib_demo PRIVATE ${ARROW_LIB_INCLUDES})
+
+
+# We need the shared library to be in a place known by the executable. Adding its location to the system
+# path will work, but also just placing it next to the executable. We can do this automatically with the
+# install interface.
+
+install(TARGETS shared_lib_demo arrow_library DESTINATION ${CMAKE_INSTALL_PREFIX})
+
+# The install interface allows you to select the files that you want to distribute, and isolate them from
+# of the build system and other temporary files.
