@@ -28,5 +28,5 @@ All of them are used in the following examples:
 
 ## Pending:
 
-- SCons and Bazel examples.
+- Bazel examples.
 - Check build systems on Ubuntu and fix them if problems are found.
