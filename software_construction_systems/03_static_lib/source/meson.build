@@ -13,6 +13,6 @@ subdir('arrow_lib')
 demo_exec = executable('static_lib_demo',
     'main.cpp',
     link_with : arrow_lib,
-    include_directories : arrow_lib_includes
+    include_directories : arrow_lib_include
 )
 test('simple execution', demo_exec)

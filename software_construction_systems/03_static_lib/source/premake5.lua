@@ -23,7 +23,7 @@ project "static_lib_demo"
     files {"main.cpp"}
 
     -- Linking against arrow_lib, we need the binary and the includes.
-    includedirs {"arrow_lib/includes"}
+    includedirs {"arrow_lib/include"}
     links { "arrow_library" }
 
     -- We use the same configurations than for the library, but we could build all permutations

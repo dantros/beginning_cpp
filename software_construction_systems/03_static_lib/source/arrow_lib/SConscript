@@ -2,14 +2,14 @@
 Import('env')
 
 env_lib = env.Clone(
-    CPPPATH=['includes'] # Setting the headers for the library code
+    CPPPATH=['include'] # Setting the headers for the library code
 )
 
 source_files = [
-    'sources/arrow_functions.cpp',
-    'sources/arrow.cpp',
-    'sources/point_functions.cpp',
-    'sources/triangle.cpp'
+    'source/arrow_functions.cpp',
+    'source/arrow.cpp',
+    'source/point_functions.cpp',
+    'source/triangle.cpp'
 ]
 
 lib = env_lib.StaticLibrary('arrow_library', source_files)

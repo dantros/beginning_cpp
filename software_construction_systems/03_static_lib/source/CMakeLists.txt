@@ -9,7 +9,7 @@ project(code_as_static_library CXX)
 add_subdirectory(arrow_lib)
 
 # We also need to know where are the headers
-set(ARROW_LIB_INCLUDES arrow_lib/includes)
+set(ARROW_LIB_INCLUDES arrow_lib/include)
 
 add_executable(static_lib_demo "main.cpp")
 set_property(TARGET static_lib_demo PROPERTY CXX_STANDARD 20)

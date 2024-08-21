@@ -12,21 +12,21 @@ project "arrow_library"
 
     -- Considering only the files related to this library
     -- for ilustration purposes, we are using wildcards
-    files { "sources/*.cpp" }
+    files { "source/*.cpp" }
 
     -- ... but we could also have listed each file independently
     --[[
     files {
-        "sources/arrow_functions.cpp",
-        "sources/arrow.cpp",
-        "sources/point_functions.cpp",
-        "sources/triangle.cpp"
+        "source/arrow_functions.cpp",
+        "source/arrow.cpp",
+        "source/point_functions.cpp",
+        "source/triangle.cpp"
     }
     ]]--
 
     -- since headers are not located next to the source files, we need to specify the path where to look for headers
     -- this way, we can include header files in the cpp files simply as '#include "myheader.h"'
-    includedirs {"includes"}
+    includedirs {"include"}
 
     filter "configurations:Debug"
         defines { "DEBUG" }

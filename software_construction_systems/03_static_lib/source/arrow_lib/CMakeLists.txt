@@ -6,11 +6,11 @@
 # we don't need to specify headers, only source files
 # headers are referenced from inside each cpp file
 add_library(arrow_library STATIC
-    "sources/arrow_functions.cpp"
-    "sources/arrow.cpp"
-    "sources/point_functions.cpp"
-    "sources/triangle.cpp"
+    "source/arrow_functions.cpp"
+    "source/arrow.cpp"
+    "source/point_functions.cpp"
+    "source/triangle.cpp"
 )
 
 # We need to tell this library where to look for the headers referenced in the source files
-target_include_directories(arrow_library PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/includes")
+target_include_directories(arrow_library PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/include")

@@ -14,7 +14,7 @@ env_exe = env.Clone()
 # Telling our environment ...
 env_exe.Append(
     # where are the includes for the arrow_library
-    CPPPATH=['arrow_lib/includes'],
+    CPPPATH=['arrow_lib/include'],
 
     # where to find libraries
     LIBPATH=['arrow_lib'],

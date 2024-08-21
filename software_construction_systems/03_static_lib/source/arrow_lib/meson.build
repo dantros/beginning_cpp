@@ -1,13 +1,13 @@
 
 arrow_lib_sources = [
-    'sources/arrow_functions.cpp',
-    'sources/arrow.cpp',
-    'sources/point_functions.cpp',
-    'sources/triangle.cpp'
+    'source/arrow_functions.cpp',
+    'source/arrow.cpp',
+    'source/point_functions.cpp',
+    'source/triangle.cpp'
 ]
-arrow_lib_includes = include_directories('includes')
+arrow_lib_include = include_directories('include')
 
 arrow_lib = static_library('arrow_lib',
     arrow_lib_sources,
-    include_directories : arrow_lib_includes
+    include_directories : arrow_lib_include
 )
