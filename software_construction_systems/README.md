@@ -15,6 +15,13 @@ All of them are used in the following examples:
 - Static library
 - Shared library
 
+## Pre requisite
+
+### Ubuntu
+```
+sudo apt-get install g++ git cmake 
+```
+
 ## Building the basic examples // outdated.
 
 - Open "x64 Native Tools Command Prompt for VS 2019" inside the build folder. Execute there `cmake ..\source`.
