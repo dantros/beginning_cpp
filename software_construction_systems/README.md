@@ -19,7 +19,8 @@ All of them are used in the following examples:
 
 ### Ubuntu
 ```
-sudo apt-get install g++ git cmake 
+sudo apt-get install g++ git cmake
+sudo apt install libwayland-dev libxkbcommon-dev xorg-dev
 ```
 
 ## Building the basic examples // outdated.
