@@ -12,7 +12,7 @@ source_files = [
     'source/triangle.cpp'
 ]
 
-# with this define, we add the __declspec(dllexport) / __declspec(dllexport) to the classes and
+# with this define, we add the __declspec(dllexport) / __declspec(dllimport) to the classes and
 # functions of the public API of this shared library. Check 'arrow_lib_shared.h'
 env_lib.Append(CPPDEFINES = ['ARROW_LIB']) 
 

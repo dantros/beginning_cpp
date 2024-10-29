@@ -19,7 +19,7 @@ project(code_as_shared_library CXX)
 
 # We will do a more conventional approach, compatible with other build systems.
 # This means you have to mark the public API of the dll in your code using 
-# __declspec(dllexport) and __declspec(dllexport)
+# __declspec(dllexport) and __declspec(dllimport)
 # check these pages:
 # https://stackoverflow.com/questions/71824443/using-declspecdllexport-before-every-public-method
 # https://learn.microsoft.com/en-us/cpp/build/exporting-from-a-dll-using-declspec-dllexport?view=msvc-170

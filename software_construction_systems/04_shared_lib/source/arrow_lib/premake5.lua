@@ -6,7 +6,7 @@ project "arrow_library"
     language "C++"
     cppdialect "C++20"
 
-    -- with this define, we add the __declspec(dllexport) / __declspec(dllexport) to the classes and
+    -- with this define, we add the __declspec(dllexport) / __declspec(dllimport) to the classes and
     -- functions of the public API of this shared library. Check 'arrow_lib_shared.h'
     defines { "ARROW_LIB" }
 
