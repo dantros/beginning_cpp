@@ -1,5 +1,5 @@
 /**
- * @file tutorial_01.cpp
+ * @file tutorial_02_containers_and_algorithms.cpp
  * @author Daniel Calderón (https://github.com/dantros)
  * @brief Tutorial C++ code showing how to use some containers and algorithms.
  * @version 1.0
