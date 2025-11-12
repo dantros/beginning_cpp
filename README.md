@@ -2,8 +2,8 @@
 
 This repository aims to aid beginners with C++. Covering different topics. It is a constant work in progress. So far there are examples for:
 
-- [C++ Basics](./basics/README.md)
-- [Software Construction Systems Tutorials](./software_construction_systems/README.md)
+- [C++ Basics](./basics/README.md) : Learn by studying different single file programs showcasing different programming strategies and C++ features: classes, templates, namespaces, smart pointers, STL containers & algorithms, etc. We will use a compiler directly with a single file each time.
+- [Software Construction Systems Tutorials](./software_construction_systems/README.md) : Here you are challenged to learn different build systems so you can assemble your own large software. Examples include CMake, SCons, Premake and Meson (more on the way, some day), and with them, we will build executables and static and dynamic libraries.
 
 ## Getting the necessary software
 
@@ -21,14 +21,12 @@ The following software is used in these tutorials.
 - Python website: https://www.python.org/
 - Miniconda website: https://docs.anaconda.com/miniconda/
 
-That is a lot of software, but we will go step by step, so you know what is going on.
+This is a lot, but we will go step by step, so you know what is going on.
 
 ## Getting Started (Windows)
 
 The recomended way toi start is using Visual Studio Comunity to get a C++ development environment.
-When installing it, select "Desktop development with C++".
-
-At this point, you can jump right ahead to [C++ Basics](./basics/README.md)
+When installing it, select "Desktop development with C++". At this point, you can jump to [C++ Basics](./basics/README.md)
 
 ## Setting up a development terminal (Windows)
 - Configure a terminal to have the necesary programs available. Meaning, adding all relevant directories to the system path. There are many ways to achieve this, the basic one is directly editing the system path.
@@ -61,4 +59,4 @@ echo on
 "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvars64.bat"
 ```
 
-You should have the right paths depending on the installations you did on your machine.
+You should have the right paths depending on your own install directories.
